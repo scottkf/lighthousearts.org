@@ -22,3 +22,12 @@
 [submodule "extensions/xssfilter"]
 	path = extensions/xssfilter
 	url = git://github.com/symphonycms/xssfilter.git
+[submodule "subsectionmanager"]
+	path = subsectionmanager
+	url = https://github.com/nilshoerrmann/subsectionmanager.git
+[submodule "extensions/subsectionmanager"]
+	path = extensions/subsectionmanager
+	url = https://github.com/nilshoerrmann/subsectionmanager.git
+[submodule "extensions/datetime"]
+	path = extensions/datetime
+	url = https://github.com/nilshoerrmann/datetime.git
