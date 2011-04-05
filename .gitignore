@@ -1,4 +1,5 @@
 ._*
+.sass-cache
 .Apple*
 .DS_Store
 *config.php

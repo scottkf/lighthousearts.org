@@ -6,39 +6,8 @@
 <xsl:import href="../utilities/master.xsl"/>
 
 <xsl:template match="/data">
-	<style type="text/css">
-		.weekendday {
-			color: red;
-		}
 
-		.current {
-			background: orange;
-		}
-
-		.weekdays {
-			background: yellow;
-		}
-
-		.weekdays td {
-			color: blue;
-			padding: 10px;
-			text-align: center;
-		}
-
-		.month {
-			color: green;
-		}
-
-		.year {
-			color: magenta;
-		}
-
-		.days {
-			text-align: center;
-		}
-
-	</style>
 	<h1><xsl:value-of select="$page-title"/></h1>
-	<xsl:value-of select="php:function('generate_calendar', calendar-main-events)" disable-output-escaping="yes"/><br />
+	<xsl:value-of select="php:function('generate_calendar', calendar-main-events, 'calendar')" disable-output-escaping="yes"/>
 </xsl:template>
 </xsl:stylesheet>

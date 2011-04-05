@@ -1,0 +1,119 @@
+@import "partials/base";
+@import "blueprint";
+
+.calendar {
+  border-collapse: separate;
+  border-width: 1px 1px 1px 1px;
+  background-color: white;
+  tr {
+    &.weekdays td {
+      text-align: center;
+      border-right: none;
+      padding-top: 30px;
+      height: 20px;
+      &:hover {
+        background-color: white; 
+      }
+    }
+    &.days:hover {
+      background-color: #f3f3f3;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      td {
+        ul {
+          li {
+            a {} } } }
+      }
+  }
+  td, th {
+    width: 50px;
+    height: 80px;
+    overflow: hidden;
+    text-align: left;
+    vertical-align: top;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    color: #444444;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.1em; }
+  th {
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1.2em;
+    &.month, &.year, &.today {
+      border-bottom: 0px;
+      height: 10px;
+      font-weight: bold;
+      font-size: 14px; } }
+  td {
+    border-right: 1px dashed #cccccc;
+    border-bottom: 1px dashed #cccccc;
+    ul {
+      list-style-type: none;
+      padding-left: 0em;
+      li {
+        color: #777;
+        &.description {
+          display: none;
+        }
+      }
+    }
+    
+    & > span {
+      font-size: 2em;
+      color: black;
+    }
+
+    &.current:hover {
+      background-color: #3b6795;
+      ul {
+        li {
+          color: black;
+          a {} } } }
+    &:hover {
+      small {
+        a {
+          color: white; } }
+      background-color: #3b6795;
+      span {
+        color: white; }
+      ul {
+        img {
+          border: 1px inset #7e848e - #333333; }
+        p {
+          color: #dddddd; }
+        h5 {
+          color: white; }
+        li {
+          color: black;
+          a {
+            color: white; } }
+        li {
+          &.tuition-due {
+            a {
+              color: white; } }
+          &.class {
+            a {
+              color: #dfebfa; } } } } }
+
+    &:hover, &.month:hover {
+      background-position: 0px -81px;
+      color: #222222; }
+ 
+    &.other-month {
+      background: #dddddd;
+      color: #aaaaaa;
+      a {
+        color: #aaaaaa; } }
+    &.current {
+      background-position: 81px 0px;
+      color: black;
+      background-color: #dddddd; }
+    &.current:hover {} } }
+
+#calendar-month {
+  table {
+    td {
+      width: 80px;
+      height: 80px; } } }

@@ -39,17 +39,18 @@
 
 
 			  <!-- CSS : implied media="all" -->
-<!--			  <link rel="stylesheet" href="css/style.css?v=2"/> -->
+			  <link rel="stylesheet" href="{$workspace}/stylesheets/screen.css"/>
+			  <link rel="stylesheet" href="{$workspace}/stylesheets/calendar.css"/>
 
 			  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
 			  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
 			  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-			  <script src="workspace/javascript/libs/modernizr-1.7.min.js"></script>
+			  <script src="{$workspace}/javascript/libs/modernizr-1.7.min.js"></script>
 
 			</head>
 
-			<body>
+			<body class="bp">
 
 			  <div id="container">
 			    <header>
@@ -71,16 +72,11 @@
 			  <script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="workspace/libs/jquery-1.5.2.min.js"%3E%3C/script%3E'))]]></script>
 
 
-			  <!-- scripts concatenated and minified via ant build script-->
-			  <!-- <script src="js/plugins.js"></script>
-			  <script src="js/script.js"></script> -->
-			  <!-- end concatenated and minified scripts-->
-
-
-			  <xsl:comment><![CDATA[[if lt IE 7]>
-			    <script src="js/libs/dd_belatedpng.js"></script>
-			    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
-			  <![endif]]]></xsl:comment>
+	
+			  <!-- <xsl:comment><![CDATA[[if lt IE 7]>
+					    <script src="js/libs/dd_belatedpng.js"></script>
+					    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+					  <![endif]]]></xsl:comment> -->
 
 
 			  <script>
