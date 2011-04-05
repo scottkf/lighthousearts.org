@@ -29,9 +29,8 @@ Class eventgenerate_a_calendar extends Event {
 
 
 
-function generate_calendar($path, $class = 'calendar'){
+function generate_calendar($path, $url = '', $class = 'calendar', $mtype = 'full', $dtype = 'full'){
 	$output = '';
-	$events = $path[0]->childNodes;
 
 	$q_year = 'year';
 	$q_month = 'month';
@@ -41,8 +40,11 @@ function generate_calendar($path, $class = 'calendar'){
 	$settings["year"] = (isset($_REQUEST[$q_year]) && preg_match('/[0-9]{4}/',$_REQUEST[$q_year]) ? $_REQUEST[$q_year] : date('Y'));
 	$settings["month"] = (isset($_REQUEST[$q_month]) && preg_match('/[0-1]{1}[0-9]{1}/', $_REQUEST[$q_month]) ? $_REQUEST[$q_month] : date('m'));
 	$settings["year_url_pattern"] = $settings["month_url_pattern"] = preg_replace('/\\?.*/','',$_SERVER['REQUEST_URI'])."?".$q_year."={year}&amp;".$q_month."={month}";
+	$settings["url"] = $url;
+	$settings["month_type"] = $mtype;
+	$settings["day_type"] = $dtype;
 
-	$calendar = new displayCalendar($events, $settings);
+	$calendar = new displayCalendar($path[0]->childNodes, $settings);
 
 	$output .= $calendar->render();
 
@@ -64,6 +66,7 @@ class displayCalendar {
 		foreach ($events as $event) {
 			if (!preg_match('/entry/', $event->nodeName)) continue;
 			$i = count($this->events);
+			$this->events[$i]["id"] = $event->getAttribute("id");
 
 			// parse through the fields
 			foreach ($event->childNodes as $item) {
@@ -348,8 +351,13 @@ class displayCalendar {
 				foreach ($list as $item) {
 					$output .= "<ul>";
 					foreach ($item as $k=>$v) {
-						if ($k == "start" or $k == "end") continue;
-						$output .= "<li class=\"".$k."\">".$v."</li>";
+						if ($k == "start" or $k == "end" or $k == "id") continue;
+						$output .= "<li class=\"".$k."\">"; 
+						if ($this->settings['url'] != '') 
+							$output .= "<a rel=\"event\" href=\"".$this->settings["url"]."/".$item["id"]."\">".$v."</a>";
+						else 
+							$output .= $v;
+						$output .= "</li>";
 					}
 					$output .= "</ul>";
 				}

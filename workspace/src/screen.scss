@@ -20,7 +20,6 @@
 @import "compass/css3";
 
 body.bp {
-	@include blueprint-typography(true);
 	@include blueprint-utilities;
 
 	h1,h2,h3,h4,h5 {

@@ -2,26 +2,27 @@
 .calendar {
   border-collapse: separate;
   border-width: 1px 1px 1px 1px;
+  border: 1px solid #ccc;
   background-color: white;
 }
-/* line 9, ../src/calendar.scss */
+/* line 10, ../src/calendar.scss */
 .calendar tr.weekdays td {
   text-align: center;
   border-right: none;
   padding-top: 30px;
   height: 20px;
 }
-/* line 14, ../src/calendar.scss */
+/* line 15, ../src/calendar.scss */
 .calendar tr.weekdays td:hover {
   background-color: white;
 }
-/* line 18, ../src/calendar.scss */
+/* line 19, ../src/calendar.scss */
 .calendar tr.days:hover {
   background-color: #f3f3f3;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 28, ../src/calendar.scss */
+/* line 29, ../src/calendar.scss */
 .calendar td, .calendar th {
   width: 50px;
   height: 80px;
@@ -35,113 +36,155 @@
   font-weight: bold;
   font-size: 1.1em;
 }
-/* line 40, ../src/calendar.scss */
+/* line 41, ../src/calendar.scss */
 .calendar th {
+  background-color: white;
   text-align: center;
   border-bottom: 1px solid #cccccc;
   font-size: 1.2em;
 }
-/* line 44, ../src/calendar.scss */
+/* line 46, ../src/calendar.scss */
 .calendar th.month, .calendar th.year, .calendar th.today {
   border-bottom: 0px;
   height: 10px;
   font-weight: bold;
   font-size: 14px;
 }
-/* line 49, ../src/calendar.scss */
+/* line 51, ../src/calendar.scss */
 .calendar td {
   border-right: 1px dashed #cccccc;
   border-bottom: 1px dashed #cccccc;
 }
-/* line 52, ../src/calendar.scss */
+/* line 54, ../src/calendar.scss */
 .calendar td ul {
   list-style-type: none;
   padding-left: 0em;
 }
-/* line 55, ../src/calendar.scss */
+/* line 57, ../src/calendar.scss */
 .calendar td ul li {
   color: #777;
 }
-/* line 57, ../src/calendar.scss */
+/* line 59, ../src/calendar.scss */
 .calendar td ul li.description {
   display: none;
 }
-/* line 63, ../src/calendar.scss */
+/* line 65, ../src/calendar.scss */
 .calendar td > span {
   font-size: 2em;
   color: black;
 }
-/* line 68, ../src/calendar.scss */
-.calendar td.current:hover {
-  background-color: #3b6795;
-}
-/* line 71, ../src/calendar.scss */
-.calendar td.current:hover ul li {
-  color: black;
-}
-/* line 74, ../src/calendar.scss */
-.calendar td:hover {
-  background-color: #3b6795;
-}
-/* line 76, ../src/calendar.scss */
-.calendar td:hover small a {
-  color: white;
-}
-/* line 79, ../src/calendar.scss */
-.calendar td:hover span {
-  color: white;
-}
-/* line 82, ../src/calendar.scss */
-.calendar td:hover ul img {
-  border: 1px inset #4b515b;
-}
-/* line 84, ../src/calendar.scss */
-.calendar td:hover ul p {
-  color: #dddddd;
-}
-/* line 86, ../src/calendar.scss */
-.calendar td:hover ul h5 {
-  color: white;
-}
-/* line 88, ../src/calendar.scss */
-.calendar td:hover ul li {
-  color: black;
-}
-/* line 90, ../src/calendar.scss */
-.calendar td:hover ul li a {
-  color: white;
-}
-/* line 94, ../src/calendar.scss */
-.calendar td:hover ul li.tuition-due a {
-  color: white;
-}
-/* line 97, ../src/calendar.scss */
-.calendar td:hover ul li.class a {
-  color: #dfebfa;
-}
-/* line 100, ../src/calendar.scss */
-.calendar td:hover, .calendar td.month:hover {
-  background-position: 0px -81px;
-  color: #222222;
-}
-/* line 104, ../src/calendar.scss */
-.calendar td.other-month {
-  background: #dddddd;
-  color: #aaaaaa;
-}
-/* line 107, ../src/calendar.scss */
-.calendar td.other-month a {
-  color: #aaaaaa;
-}
-/* line 109, ../src/calendar.scss */
+/* line 69, ../src/calendar.scss */
 .calendar td.current {
   background-position: 81px 0px;
   color: black;
   background-color: #dddddd;
 }
+/* line 74, ../src/calendar.scss */
+.calendar td.current:hover {
+  background-color: #3b6795;
+}
+/* line 77, ../src/calendar.scss */
+.calendar td.current:hover ul li {
+  color: black;
+}
+/* line 83, ../src/calendar.scss */
+.calendar td:hover {
+  background-color: #3b6795;
+}
+/* line 85, ../src/calendar.scss */
+.calendar td:hover small a {
+  color: white;
+}
+/* line 88, ../src/calendar.scss */
+.calendar td:hover span {
+  color: white;
+}
+/* line 91, ../src/calendar.scss */
+.calendar td:hover ul img {
+  border: 1px inset #4b515b;
+}
+/* line 93, ../src/calendar.scss */
+.calendar td:hover ul p {
+  color: #dddddd;
+}
+/* line 95, ../src/calendar.scss */
+.calendar td:hover ul h5 {
+  color: white;
+}
+/* line 97, ../src/calendar.scss */
+.calendar td:hover ul li {
+  color: black;
+}
+/* line 99, ../src/calendar.scss */
+.calendar td:hover ul li a {
+  color: white;
+}
+/* line 103, ../src/calendar.scss */
+.calendar td:hover ul li.tuition-due a {
+  color: white;
+}
+/* line 106, ../src/calendar.scss */
+.calendar td:hover ul li.class a {
+  color: #dfebfa;
+}
+/* line 109, ../src/calendar.scss */
+.calendar td:hover, .calendar td.month:hover {
+  background-position: 0px -81px;
+  color: #222222;
+}
+/* line 113, ../src/calendar.scss */
+.calendar td.other-month {
+  background: #dddddd;
+  color: #aaaaaa;
+}
+/* line 116, ../src/calendar.scss */
+.calendar td.other-month a {
+  color: #aaaaaa;
+}
 
-/* line 117, ../src/calendar.scss */
-#calendar-month table td {
-  width: 80px;
-  height: 80px;
+/* line 119, ../src/calendar.scss */
+.calendar-short {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 369.167px;
+  background-color: #f3f3f3;
+}
+/* line 138, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .calendar-short {
+  overflow-x: hidden;
+}
+/* line 122, ../src/calendar.scss */
+.calendar-short th {
+  background-color: white;
+}
+/* line 125, ../src/calendar.scss */
+.calendar-short td {
+  width: 10px;
+  height: 10px;
+}
+/* line 128, ../src/calendar.scss */
+.calendar-short td.current {
+  background-position: 81px 0px;
+  color: black;
+  background-color: #dddddd;
+}
+/* line 133, ../src/calendar.scss */
+.calendar-short td ul {
+  margin: 0em;
+  list-style-type: none;
+  padding: 0px;
+}
+/* line 137, ../src/calendar.scss */
+.calendar-short td ul li {
+  padding: 0px;
+  margin: 0px;
+}
+/* line 140, ../src/calendar.scss */
+.calendar-short td ul li a {
+  font-size: .5em;
+}
+/* line 143, ../src/calendar.scss */
+.calendar-short td ul li.description {
+  display: none;
 }

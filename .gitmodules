@@ -31,3 +31,6 @@
 [submodule "extensions/datetime"]
 	path = extensions/datetime
 	url = https://github.com/nilshoerrmann/datetime.git
+[submodule "workspace/javascript/libs/colorbox"]
+	path = workspace/javascript/libs/colorbox
+	url = https://github.com/jackmoore/colorbox.git

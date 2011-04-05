@@ -40,6 +40,7 @@
 
 			  <!-- CSS : implied media="all" -->
 			  <link rel="stylesheet" href="{$workspace}/stylesheets/screen.css"/>
+			  <link rel="stylesheet" href="{$workspace}/stylesheets/colorbox.css"/>
 			  <link rel="stylesheet" href="{$workspace}/stylesheets/calendar.css"/>
 
 			  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -69,9 +70,11 @@
 
 			  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 			  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
-			  <script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="workspace/libs/jquery-1.5.2.min.js"%3E%3C/script%3E'))]]></script>
+			  <script><![CDATA[!window.jQuery && document.write(unescape('%3Cscript src="{$workspace}/javascript/libs/jquery-1.5.2.min.js"%3E%3C/script%3E'))]]></script>
 
 
+				<script src="{$workspace}/javascript/site.js"></script>
+				<script src="{$workspace}/javascript/libs/colorbox/jquery.colorbox-min.js"></script>				
 	
 			  <!-- <xsl:comment><![CDATA[[if lt IE 7]>
 					    <script src="js/libs/dd_belatedpng.js"></script>
